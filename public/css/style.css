@@ -1,0 +1,7 @@
+#error .heading {
+  color: red;
+}
+
+#success .heading {
+  color: green;
+}

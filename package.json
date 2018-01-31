@@ -1,0 +1,46 @@
+{
+  "name": "express-async-seed",
+  "version": "0.0.1",
+  "description": "",
+  "main": "start.js",
+  "scripts": {
+    "start": "node build/server.js",
+    "dev": "NODE_ENV=development PORT=8000 TZ='America/Chicago' nodemon start.js",
+    "test": "PORT=8001 TZ='America/Chicago' mocha build/test -t 10000",
+    "build": "babel -d build src",
+    "watch": "babel --watch -d build src | ts '[%Y-%m-%d %H:%M:%S]'",
+    "webpack": "NODE_ENV=development webpack --progress --watch"
+  },
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "bootstrap": "^4.0.0",
+    "chalk": "^2.1.0",
+    "express": "^4.16.2",
+    "google-auth-library": "^0.12.0",
+    "googleapis": "^25.0.0",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "standard": {
+    "globals": [
+      "it",
+      "describe",
+      "beforeEach",
+      "afterEach",
+      "before",
+      "after",
+      "Backbone",
+      "_",
+      "$"
+    ]
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
